@@ -6,15 +6,15 @@ pipeline {
         AWS_DEFAULT_REGION = 'us-east-1'  // Replace with your preferred AWS region
     }
     stages {
-        stage ('creating setup to k8 cluster')
-        {
-            steps{
-                sh """
-                    chmod +x eks.sh
-                    ./eks.sh 
-                """
-            }
-        }
+        // stage ('creating setup to k8 cluster')
+        // {
+        //     steps{
+        //         sh """
+        //             chmod +x eks.sh
+        //             ./eks.sh 
+        //         """
+        //     }
+        // }
         stage ('Login into aws')
         {
             steps {
