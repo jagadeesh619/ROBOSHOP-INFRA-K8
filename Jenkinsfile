@@ -10,6 +10,7 @@ pipeline {
         {
             steps{
                 sh """
+                    chmod +x eks.sh
                     ./eks.sh 
                 """
             }
@@ -29,7 +30,7 @@ pipeline {
             steps{
 
                 sh """
-                
+
                 eksctl create cluster --config-file=eks.yaml
 
                 """
